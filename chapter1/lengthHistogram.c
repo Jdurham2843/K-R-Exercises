@@ -21,4 +21,4 @@ int main() {
     return 0;
 }
 
-/* print histogram for the length of words */
+/* fixme: print histogram for the length of words */
