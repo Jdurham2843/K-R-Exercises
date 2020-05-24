@@ -20,6 +20,8 @@ int main() {
     }
 
     if (max > 0) {
+        printf("The line length is %d\n", max);
+        printf("---------------------------------------\n");
         printf("%s", longest);
     }
     return 0;
@@ -28,12 +30,10 @@ int main() {
 int getlinee(char s[], int lim) {
     int c, i;
 
-    for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
-        /* Adding this if to have a termination case. This isn't present in the book. */
-        if (c == 'Q') { 
-            return -1;
+    for (i = 0; (c = getchar()) != EOF && c != '\n' && c != 'Q'; ++i) {
+        if (i < lim - 1) {
+            s[i] = c;
         }
-        s[i] = c;
     }
 
     if (c == '\n') {
