@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
     printf("Popped %d\n", number);
 
     printStack(stack);
-    /*freeStack(stack); */
+    freeStack(stack); 
 
     helloWorld();
 
